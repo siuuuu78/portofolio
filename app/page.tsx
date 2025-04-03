@@ -257,10 +257,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
+      <div className="bg-black">
+        
       <ScrollVelocity
         texts={['Ntar Lagi Kuliah', 'Dah Semester 6 njr']}
       />
+      </div>
      <Timeline data = {data}/>
     </div>
   );
