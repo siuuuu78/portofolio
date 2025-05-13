@@ -1,164 +1,21 @@
-import Image from "next/image";
 import Lanyard from "./componnents/Lanyard/Lanyard";
 import RotatingText from "./componnents/RotatingText/RotatingText";
 import SplitText from "./componnents/SplitText/SplitText";
 import BlurText from "./componnents/BlurText/BlurText";
 import AnimatedContent from "./componnents/AnimatedContent/AnimatedContent";
 import Squares from "./componnents/Squares/Squares";
-import GradientText from "./componnents/GradientText/GradientText";
-// import CircularText from "./componnents/CircularText/CircularText";
 import ScrollVelocity from "./componnents/ScrollVelocity/ScrollVelocity";
-import { Timeline } from "./componnents/Timelines/Timeline"
+import TiltedCard from "./componnents/TiltedCard/TiltedCard";
+import ScrollFloat from "./componnents/ScrollFloat/ScrollFloat";
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
+import Link from 'next/link';
+
 
 export default function Home() {
 
-  const data = [
-    {
-      title: "2024",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Built and launched Aceternity UI and Aceternity UI Pro from scratch
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="/assets/images/project1.png"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/assets/images/project1.png"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/assets/images/project1.png"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/assets/images/project1.png"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Early 2023",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
-          </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="/assets/images/project1.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/assets/images/project1.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/assets/images/project1.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/assets/images/project1.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Changelog",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            Deployed 5 new components on Aceternity today
-          </p>
-          <div className="mb-8">
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Card grid component
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Startup template Aceternity
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Random file upload lol
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Himesh Reshammiya Music CD
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Salman Bhai Fan Club registrations open
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="/assets/images/project1.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/assets/images/project1.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/assets/images/project1.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/assets/images/project1.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-  ];
-
+ 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#19222D]">
+    <div className="min-h-screen overflow-x-hidden bg-neutral-950">
       <div className="absolute top-0 right-0 left-0 bottom-0 w-full h-full">
       <Squares 
       speed={0.5} 
@@ -222,48 +79,195 @@ export default function Home() {
             </div>
 
               <BlurText 
-                 text="Hi there! I'm Rayhan Atricha Rambe, a passionate developer and tech enthusiast. 
-                 I love exploring new technologies, solving problems, and working on exciting projects. 
-                 Here you'll find my work in various programming languages, tools, and frameworks that 
-                 I am constantly improving my skills in."
+                 text="I'm Rayhan Atricha Rambe — a developer who loves exploring tech, solving problems, and building cool things.
+                        Check out my work as I keep learning and growing in this ever-evolving world of code."
                  delay={75}
                  animateBy="words"
                  direction="top"
                  className="text-xl mb-8"
               />
               <div className="flex items-center">
-            <GradientText
-              colors={["#40ffaa", "#C6F10E", "#40ffaa", "#C6F10E", "#40ffaa"]}
-              animationSpeed={3}
-              showBorder={false}
-              className="px-8 py-6 rounded-lg border"
-            >
-              Contact Now!
-            </GradientText>
+           
               </div>
       
             </div>
-            </div>
+              </div>
+              </div>
 
+              <div className="col-span-6 relative">
+              <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]}/>
+              </div>
           </div>
-          <div className="col-span-6 relative">
-            <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]}/>
-            {/* <CircularText
-              text="INFORMATION*SYSTEM*ID*"
-              onHover="speedUp"
-              spinDuration={20}
-              className="absolute top-10 right-10"
-            /> */}
-          </div>
+      </div>
+
+        <div className="bg-neutral-950 py-10">
+        <ScrollVelocity
+          texts={['Ntar Lagi Kuliah', 'Dah Semester 6 njr']}
+        />
         </div>
+
+      <div className="container mx-auto h-screen bg-neutral-950">
+        <div className="grid grid-cols-12 ">
+          <div className="col-span-6 ">
+            <div className="flex items-center h-full">
+              <div className="flex flex-col gap-2">
+              <ScrollFloat
+                  animationDuration={1}
+                  ease='back.inOut(2)'
+                  scrollStart='center bottom+=50%'
+                  scrollEnd='bottom bottom-=40%'
+                  stagger={0.03}
+                  textClassName="font-bold pl-20 "
+                >
+                  About Me
+                </ScrollFloat>
+                <ScrollFloat
+                  animationDuration={1}
+                  ease='back.inOut(2)'
+                  scrollStart='center bottom+=50%'
+                  scrollEnd='bottom bottom-=40%'
+                  stagger={0.03}
+                  textClassName="text-base pl-20"
+                >
+                  Mau tau lebih tentang aku?
+                </ScrollFloat>
+
+                <Link href="/aboutme">
+                  <button className="bg-[#19222D] hover:bg-[#444A29] text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 ml-20">
+                    Let's Go!
+                  </button>
+                </Link>
+
+              </div>
+            </div>
+          </div>
+          <div className="col-span-6 ">
+          <div className="items-center pl-40 py-28">
+          <AnimatedContent
+              distance={150}
+              direction="horizontal"
+              reverse={false}
+              config={{ tension: 80, friction: 20 }}
+              initialOpacity={0.2}
+              animateOpacity
+              scale={1.1}
+              threshold={0.2}
+            >
+            <TiltedCard
+              imageSrc="./assets/images/nyerah.jpeg"
+              altText="Rayhan"
+              captionText="Rayhan Atricha Rambe"
+              containerHeight="350px"
+              containerWidth="350px"
+              imageHeight="350px"
+              imageWidth="350px"
+              rotateAmplitude={12}
+              scaleOnHover={1.1}
+              showMobileWarning={false}
+              showTooltip={true}
+              displayOverlayContent={true}
+              
+            />
+            </AnimatedContent>
+          </div>
+          </div>
+        </div>  
       </div>
-      <div className="bg-black">
+
+      <div className="container mx-auto h-screen bg-neutral-950">
+        <div className="grid grid-cols-12 ">
+          <div className="col-span-6 ">
+            <div className="flex items-center h-full">
+              <div className="flex flex-col gap-2">
+              <ScrollFloat
+                  animationDuration={1}
+                  ease='back.inOut(2)'
+                  scrollStart='center bottom+=50%'
+                  scrollEnd='bottom bottom-=40%'
+                  stagger={0.03}
+                  textClassName="font-bold pl-20 "
+                >
+                  My Projects
+                </ScrollFloat>
+                <ScrollFloat
+                  animationDuration={1}
+                  ease='back.inOut(2)'
+                  scrollStart='center bottom+=50%'
+                  scrollEnd='bottom bottom-=40%'
+                  stagger={0.03}
+                  textClassName="text-base pl-20"
+                >
+                  Jelajahi project yang sudah saya kerjakan.
+                </ScrollFloat>
+
+                <Link href="/project">
+                  <button className="bg-[#19222D] hover:bg-[#444A29] text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 ml-20">
+                    Let's Go!
+                  </button>
+                </Link>
+
+              </div>
+            </div>
+          </div>
+          <div className="col-span-6 ">
+          <div className="items-center pl-40 py-28">
+          <AnimatedContent
+              distance={150}
+              direction="horizontal"
+              reverse={false}
+              config={{ tension: 80, friction: 20 }}
+              initialOpacity={0.2}
+              animateOpacity
+              scale={1.1}
+              threshold={0.2}
+            >
+            <TiltedCard
+              imageSrc="./assets/images/nyerah.jpeg"
+              altText="Rayhan"
+              captionText="Rayhan Atricha Rambe"
+              containerHeight="350px"
+              containerWidth="350px"
+              imageHeight="350px"
+              imageWidth="350px"
+              rotateAmplitude={12}
+              scaleOnHover={1.1}
+              showMobileWarning={false}
+              showTooltip={true}
+              displayOverlayContent={true}
+              
+            />
+            </AnimatedContent>
+          </div>
+          </div>
+        </div>  
+      </div>
+
+      <div className="container mx-auto h-screen flex flex-col items-center justify-center">
+             <ScrollFloat
+                  animationDuration={1}
+                  ease='back.inOut(2)'
+                  scrollStart='center bottom+=50%'
+                  scrollEnd='bottom bottom-=40%'
+                  stagger={0.03}
+                  textClassName="text-6xl"
+                >
+                  Get in Touch 
+              </ScrollFloat>
+
+            <div className="flex space-x-6 text-3xl text-gray-600">
+              <a href="https://github.com/siuuuu78" target="_blank" rel="noopener noreferrer" className="hover:text-black">
+                <FaGithub />
+              </a>
+              <a href="https://www.linkedin.com/in/rayhan-rambe-303aba25b/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                <FaLinkedin />
+              </a>
+              <a href="https://www.instagram.com/rayhanatricha" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
+                <FaInstagram />
+              </a>
+            </div>
         
-      <ScrollVelocity
-        texts={['Ntar Lagi Kuliah', 'Dah Semester 6 njr']}
-      />
       </div>
-     <Timeline data = {data}/>
+     
     </div>
   );
 }
